@@ -1,0 +1,4 @@
+connect
+module add --name=org.jboss.thunderlips --resources=../target/thunderlips-subsystem.jar --module-xml=../src/main/resources/module/main/module.xml
+/extension=org.jboss.thunderlips/:add(module=org.jboss.thunderlips)
+/subsystem=thunderlips/:add

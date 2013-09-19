@@ -1,0 +1,35 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="urn:jboss:domain:thunderlips:1.0"
+            xmlns="urn:jboss:domain:thunderlips:1.0"
+            elementFormDefault="qualified"
+            attributeFormDefault="unqualified"
+            version="1.0">
+
+    <!-- The subsystem root element -->
+    <xs:element name="subsystem" type="subsystemType"/>
+
+    <xs:complexType name="subsystemType">
+        <xs:annotation>
+            <xs:documentation>
+                <![CDATA[
+                    The ThunderLips subsystem, used to register consoles managed by ThunderLips.
+                ]]>
+            </xs:documentation>
+        <xs:choice maxOccurs="unbounded" minOccurs="0">
+            <xs:element name="console" maxOccurs="unbounded" minOccurs="0" type="console-type"/>
+        </xs:choice>
+    </xs:complexType>
+
+    <xs:complexType name="console-type">
+        <xs:attribute name="name" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation>The name of the console.</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="URL" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation>The URL where the console's javascript can be loaded from.</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+</xs:schema>
