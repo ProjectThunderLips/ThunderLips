@@ -29,12 +29,8 @@ import static org.jboss.logging.Logger.Level.INFO;
 import static org.jboss.logging.Logger.Level.WARN;
 
 /**
- * Date: 05.11.2011
  *
- *
- * 12600-12649
- *
- * @author Stan Silvert ssilvert@redhat.com (C) 2012 Red Hat Inc.
+ * @author Stan Silvert ssilvert@redhat.com (C) 2013 Red Hat Inc.
  */
 @MessageLogger(projectCode = "TLIP")
 public interface ThunderLipsLogger extends BasicLogger {

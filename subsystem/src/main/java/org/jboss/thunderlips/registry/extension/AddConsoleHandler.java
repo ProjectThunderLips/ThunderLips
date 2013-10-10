@@ -33,15 +33,13 @@ public class AddConsoleHandler extends AbstractAddStepHandler {
     public static AddConsoleHandler INSTANCE = new AddConsoleHandler();
 
     private AddConsoleHandler() {}
-    
+
     @Override
     protected void populateModel(ModelNode operation, ModelNode model) throws OperationFailedException {
         // TODO: localize exception. get id number
         if (!operation.get(OP).asString().equals(ADD)) {
             throw new OperationFailedException("Unexpected operation for add view. operation=" + operation.toString());
         }
-
-        //TODO: definition is a required field. Make sure it is defined.
 
         model.get("URL").set(operation.get("URL"));
     }

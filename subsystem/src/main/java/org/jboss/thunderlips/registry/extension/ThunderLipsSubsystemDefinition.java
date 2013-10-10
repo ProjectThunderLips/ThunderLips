@@ -42,5 +42,4 @@ public class ThunderLipsSubsystemDefinition extends SimpleResourceDefinition {
         resourceRegistration.registerOperationHandler(GenericSubsystemDescribeHandler.DEFINITION, GenericSubsystemDescribeHandler.INSTANCE);
     }
 
-
 }

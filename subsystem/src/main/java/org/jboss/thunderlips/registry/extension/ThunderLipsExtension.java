@@ -49,7 +49,9 @@ import org.jboss.as.controller.operations.common.Util;
 
 
 /**
- * @author <a href="stan.silvert@jboss.com">Stan Silvert</a>
+ * Main Extension class for the subsystem.
+ * 
+ * @author Stan Silvert ssilvert@redhat.com (C) 2013 Red Hat Inc.
  */
 public class ThunderLipsExtension implements Extension {
     public static final String SUBSYSTEM_NAME = "thunderlips";
