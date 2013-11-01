@@ -51,12 +51,16 @@
         <version.jboss-logging-tools>1.2.0.Beta1</version.jboss-logging-tools>
         <version.junit>4.8.2</version.junit>
         <version.gwt>2.5.1</version.gwt>
+        <version.picketlink>2.5.2.Final</version.picketlink>
+        <version.jboss-servlet-api>1.0.0.Final</version.jboss-servlet-api>
         <module.name>org.jboss.thunderlips</module.name>
     </properties>
 
     <modules>
         <module>subsystem</module>
         <module>mockup-console</module>
+        <module>thunderlips-idp</module>
+        <module>thunderlips-sample-sp</module>
     </modules>
 
     <dependencyManagement>
@@ -99,6 +103,28 @@
                 <artifactId>gwt-user</artifactId>
                 <version>${version.gwt}</version>
                 <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.picketlink</groupId>
+                <artifactId>picketlink-javaee-6.0</artifactId>
+                <type>pom</type>
+                <scope>import</scope>
+                <version>${version.picketlink}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.picketlink</groupId>
+                <artifactId>picketlink-federation</artifactId>
+                <version>${version.picketlink}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.jboss.spec.javax.servlet</groupId>
+                <artifactId>jboss-servlet-api_3.1_spec</artifactId>
+                <scope>provided</scope>
+                <version>${version.jboss-servlet-api}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
